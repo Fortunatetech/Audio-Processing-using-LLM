@@ -65,6 +65,48 @@ Loudness (Intensity): <annotation>
 Intonation: <annotation>
 Pauses: <annotation>
 
+Audio 1
+Tempo (Speech Rate): Moderate, with a slight increase towards the end.
+Loudness (Intensity): Generally soft, with occasional emphasis on key words.
+Intonation: Predominantly falling contour, with subtle rises on stressed phrases.
+Pauses: Short, rhetorical and infrequent, primarily occurring before important points.
+
+Audio 2
+Tempo (Speech Rate): Moderately slow, with a brief quickening in the middle.
+Loudness (Intensity): Generally moderate, with a slight increase on emphasized words.
+Intonation: Mostly flat, with occasional rises signaling mild emphasis.
+Pauses: Short breathe pauses yet strategically placed before key phrases.
+
+Audio 3:
+Tempo (Speech Rate):moderately slow in the beginning and slightly quick towards the end 
+Loudness(intensity):Generally moderate, with slight increase on emphasized words
+Intonation:mostly flat, with occasional rise signalling mild emphasis
+Pauses: short, rhetorical and strategic pauses placed before key emphasis
+
+Audio 4:
+Tempo (Speech Rate):moderately quick in the beginning and slightly slow towards the end
+Loudness(intensity):Generally moderate, with slight increase on emphasized words
+Intonation:mostly flat, with occasional rise signalling mild emphasis
+Pauses:short breathe breaks placed before key emphasis
+
+Audio 5
+Tempo (Speech Rate): Steady moderate pace with subtle rhythmic shifts.
+Loudness (Intensity): Consistently moderate, with brief accentuations on key words.
+Intonation: Mainly level with gentle inflections that underscore emphasis.
+Pauses: Evenly breathe spaced short rhetorical pauses, occasionally lengthening to mark transitions.
+
+Audio 6
+Tempo (Speech Rate):steady moderate paced with slight increase when emphasising words.
+Loudness(intensity):generally moderate , with brief accentuations on key words
+Intonation:mostly flat and slight rise when expressing key words
+Pauses:very short breathe paced pauses, placed before emphasis
+
+Audio 7
+Tempo (Speech Rate):moderately paced with slight increase when emphasising words
+Loudness(intensity):Generally moderate even when emphasising words
+Intonation:mostly urgent and expressive to emphasis certain words
+Pauses: evenly paced breathe pauses and occasional rhetorical pause towards the end.
+
 Instructions Recap:
 - Analyze independently: Evaluate each prosodic feature separately before considering their combined effect.
 - Context matters: Let the intended emotion or communicative purpose guide your emphasis on certain features.
