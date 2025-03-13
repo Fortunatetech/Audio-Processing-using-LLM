@@ -32,6 +32,27 @@ Loudness (Intensity): Loudness is the perceived volume or intensity of the speec
 Intonation: Intonation is the pattern of pitch variation across phrases or sentences. It carries meaning beyond the words, indicating the speaker’s attitude, emotion, or intent (e.g., questioning, asserting, or expressing uncertainty)
 Pauses: Pauses are the breaks or silences inserted within or between utterances. They help structure the speech, indicate boundaries between thoughts or phrases, and add dramatic or reflective effects.
 
+In English, pauses play a crucial role in speech and writing. There are four main types of pauses:  
+
+1. *Grammatical Pauses* (Punctuation Pauses)  
+   - These occur due to punctuation marks such as commas, periods, colons, and semicolons.  
+   - *Example*: "She loves reading, writing, and painting." (Pause at the comma)  
+
+2. *Rhetorical Pauses*  
+   - These are used for emphasis or dramatic effect, even if there is no punctuation.  
+   - *Example*: "And then... everything changed."  
+
+3. *Breath Pauses*  
+   - These occur naturally when speaking to take a breath, often at logical breaks in sentences.  
+   - *Example*: "After a long day at work, (pause for breath) I just want to relax."  
+
+4. *Emotional or Hesitation Pauses*  
+   - These are used when a speaker is unsure, thinking, or expressing strong emotions.  
+   - *Example*: "Well... I’m not sure about that."  
+
+Each type of pause serves a different purpose, helping to convey meaning, structure, and emotion in communication.
+
+
 Note: You need to describe these parameters in a very concise manner, Meaning; The description should not be more than one line.
 
 Study the instructions very well to understand how to answer the following section in the image above. 
@@ -43,37 +64,6 @@ Tempo (Speech Rate): <annotation>
 Loudness (Intensity): <annotation>
 Intonation: <annotation>
 Pauses: <annotation>
-
-Audio 1 
-Tempo (Speech Rate): Moderate, with a slight increase towards the end.
-Loudness (Intensity): Generally soft, with occasional emphasis on key words.
-Intonation: Predominantly falling contour, with subtle rises on stressed phrases.
-Pauses: Short and infrequent, primarily occurring before important points.
-
-Audio 2:
-Tempo (Speech Rate): Moderately slow, with a brief quickening in the middle.
-Loudness (Intensity): Generally moderate, with a slight increase on emphasized words.
-Intonation: Mostly flat, with occasional rises signaling mild emphasis.
-Pauses: Short yet strategically placed before key phrases.
-
-Audio 3:
-Tempo (Speech Rate): moderately slow in the beginning and slightly quick towards the end
-Loudness (Intensity): Generally moderate, with a slight increase on emphasized words.
-Intonation: Mostly flat, with occasional rise signaling mild emphasis.
-Pauses: Short and strategically placed before key emphasis.
-
-Audio 4:
-Tempo (Speech Rate): moderately quick in the beginning and slightly slow towards the end
-Loudness (Intensity): Generally moderate, with a slight increase on emphasized words.
-Intonation: Mostly flat, with occasional rise signaling mild emphasis.
-Pauses: Short and strategically placed.
-
-Audio 5: 
-Tempo (Speech Rate): Steady moderate pace with subtle rhythmic shifts.
-Loudness (Intensity): Consistently moderate, with brief accentuations on key words.
-Intonation: Mainly level with gentle inflections that underscore emphasis.
-Pauses: Evenly spaced short pauses, occasionally lengthening to mark transitions.
-
 
 Instructions Recap:
 - Analyze independently: Evaluate each prosodic feature separately before considering their combined effect.
