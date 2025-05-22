@@ -32,7 +32,7 @@ def load_prompt() -> str:
 
              Output Format:
               1. Transcription: Generate the trancription.
-              2. Fillers words: List Fillers words if not found return None.
+              2. Fillers words: List Fillers words found and the position the filler word(s) where they occur if not found return None.
               3. Non-Verbal Expressions: list the Non-Verbal Expressions found and position the expression where they occur in the transcription.
               4. Non-Verbal Descriptors: list the Non-Verbal Descriptors found and position the Decriptors where they occur in the Transcription.
                 """
@@ -88,7 +88,7 @@ def analyze_audio(audio_bytes: bytes, file_extension: str) -> str:
         safe_remove(tmp_path)
 
 # — Streamlit UI —
-st.title("Audio Prosodic Analyzer")
+st.title("Audio Paralinguistic Analyzer")
 uploaded_file = st.file_uploader("Upload audio", type=["mp3", "wav", "flac"])
 
 if uploaded_file:
