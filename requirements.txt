@@ -3,9 +3,5 @@ openai
 streamlit
 google-generativeai
 pandas
-json
-os 
-python-dotenv
-io
-fpdf 
+fpdf2
 python-docx
