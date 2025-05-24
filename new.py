@@ -8,7 +8,9 @@ from dotenv import load_dotenv
 from io import BytesIO
 from fpdf import FPDF
 from docx import Document
-import tempfile
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.pagesizes import letter
 
 load_dotenv()
 
@@ -162,27 +164,28 @@ if uploaded_file:
             doc.save(word_io)
             word_io.seek(0)
 
-            # — Prepare PDF —
-            pdf = FPDF()
-            pdf.add_page()
-            pdf.set_auto_page_break(auto=True, margin=15)
-            pdf.set_left_margin(10)
-            pdf.set_right_margin(10)
-
-            effective_width = pdf.w - pdf.l_margin - pdf.r_margin
-            pdf.set_font('Arial', 'B', 16)
-            pdf.multi_cell(effective_width, 10, 'Summary Report')
-            pdf.ln(2)
-            pdf.set_font('Arial', '', 12)
-
-            raw_pdf = pdf.output(dest='S')  # may be bytes or bytearray
-            # Convert to bytes if necessary
-            if isinstance(raw_pdf, bytearray):
-                pdf_bytes = bytes(raw_pdf)
-            elif isinstance(raw_pdf, str):
-                pdf_bytes = raw_pdf.encode('latin-1', 'ignore')
-            else:
-                pdf_bytes = raw_pdf
+            # --- PDF via ReportLab ---
+            pdf_io = BytesIO()
+            styles = getSampleStyleSheet()
+            story = []
+            story.append(Paragraph("Summary Report", styles['Title']))
+            story.append(Spacer(1,12))
+            for line in st.session_state.report_text.split('\n'):
+                if not line.strip(): continue
+                # Numbered lists
+                if line[0].isdigit() and line[1]=='.':
+                    story.append(Paragraph(line, styles['Bullet']))
+                # Headings
+                elif line.endswith(':'):
+                    story.append(Paragraph(line.rstrip(':'), styles['Heading2']))
+                else:
+                    story.append(Paragraph(line, styles['BodyText']))
+                story.append(Spacer(1,6))
+            doc_pdf = SimpleDocTemplate(pdf_io, pagesize=letter,
+                                       leftMargin=40, rightMargin=40,
+                                       topMargin=40, bottomMargin=40)
+            doc_pdf.build(story)
+            pdf_bytes = pdf_io.getvalue()
 
             # Download buttons
             c1, c2 = st.columns(2)

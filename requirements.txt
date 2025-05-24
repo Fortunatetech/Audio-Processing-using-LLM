@@ -6,3 +6,4 @@ pandas
 fpdf2
 python-docx
 openpyxl
+reportlab 
