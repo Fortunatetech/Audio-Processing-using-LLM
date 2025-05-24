@@ -2,3 +2,10 @@ python-dotenv
 openai
 streamlit
 google-generativeai
+pandas
+json
+os 
+python-dotenv
+io
+fpdf 
+python-docx
