@@ -146,13 +146,13 @@ if uploaded_file:
             st.subheader("📝 Summary Report")
             st.write(st.session_state.report_text)
 
-          # --- Prepare Word ---
+          # — Prepare Word —
             doc = Document()
             doc.add_heading('Summary Report', level=1)
             for line in st.session_state.report_text.split('\n'):
                 if not line.strip():
                     continue
-                if line[0].isdigit() and line[1]=='.':
+                if line[0].isdigit() and line[1] == '.':
                     doc.add_paragraph(line, style='List Number')
                 elif line.endswith(':'):
                     doc.add_heading(line.rstrip(':'), level=2)
@@ -162,36 +162,27 @@ if uploaded_file:
             doc.save(word_io)
             word_io.seek(0)
 
-            # --- Prepare PDF ---
+            # — Prepare PDF —
             pdf = FPDF()
             pdf.add_page()
             pdf.set_auto_page_break(auto=True, margin=15)
-            # set margins explicitly
             pdf.set_left_margin(10)
             pdf.set_right_margin(10)
 
-            # calculate effective width
             effective_width = pdf.w - pdf.l_margin - pdf.r_margin
-            line_height = 8
-
             pdf.set_font('Arial', 'B', 16)
-            pdf.multi_cell(effective_width, 10, 'Summary Report', align='L')
+            pdf.multi_cell(effective_width, 10, 'Summary Report')
             pdf.ln(2)
             pdf.set_font('Arial', '', 12)
 
-            for line in st.session_state.report_text.split('\n'):
-                if not line.strip():
-                    continue
-                if line.endswith(':'):
-                    pdf.set_font('Arial', 'B', 12)
-                    pdf.multi_cell(effective_width, line_height, line)
-                    pdf.set_font('Arial', '', 12)
-                else:
-                    # ensure only printable chars in Latin-1
-                    txt = line.encode('latin-1', 'ignore').decode('latin-1')
-                    pdf.multi_cell(effective_width, line_height, txt)
-
-            pdf_bytes = pdf.output(dest='S').encode('latin-1')
+            raw_pdf = pdf.output(dest='S')  # may be bytes or bytearray
+            # Convert to bytes if necessary
+            if isinstance(raw_pdf, bytearray):
+                pdf_bytes = bytes(raw_pdf)
+            elif isinstance(raw_pdf, str):
+                pdf_bytes = raw_pdf.encode('latin-1', 'ignore')
+            else:
+                pdf_bytes = raw_pdf
 
             # Download buttons
             c1, c2 = st.columns(2)
